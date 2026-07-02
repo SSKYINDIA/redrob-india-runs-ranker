@@ -34,7 +34,7 @@
 - **Runtime: ~90 seconds** on a single CPU core, well under the 5-minute budget
 - **Zero GPU · Zero internet · Zero hosted-LLM calls** at ranking time
 
-## Usage(could not upload candidates.jsonl due to large size)
+## Usage(could not upload candidates.jsonl due to large size- use the provided demo link)
 
 ```bash
 pip install -r requirements.txt
