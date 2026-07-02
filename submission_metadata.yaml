@@ -1,0 +1,84 @@
+# Redrob Hackathon — Submission Metadata
+# India.Runs Data & AI Challenge
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "KEEYOG"
+
+primary_contact:
+  name: "S Keerthana"
+  email: "sskyindia@gmail.com"
+  phone: "+91-8147161612"
+
+team_members:
+  - name: "S Keerthana"
+    email: "sskyindia@gmail.com"
+    role: "Team Leader"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/SSKYINDIA/redrob-india-runs-ranker"  
+
+sandbox_link: "https://colab.research.google.com/drive/1T6XXVrmWqkoxcRkOUqI2SQV7E1VuD0fv?usp=sharing"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Google Colab"   
+  cpu_cores: 1
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude (Anthropic) for architecture design discussion, writing and
+  debugging rank.py, and assembling this submission package (PPTX, README,
+  metadata). All ranking logic, feature weights, and disqualifier rules were
+  reviewed and validated against the real candidates.jsonl by running
+  rank.py end-to-end and inspecting results manually before finalizing.
+  No candidate data was sent to any external LLM API at ranking time —
+  rank.py itself makes zero network or LLM calls; AI assistance was used
+  only during development, not at inference/ranking time.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  A fully offline, CPU-only ranking engine combining five auditable signal
+  layers: TF-IDF cosine semantic relevance against the JD, a duration- and
+  endorsement-weighted skill-trust score, a title/role-fit score engineered
+  specifically to defeat keyword-stuffing (the JD's own sample submission
+  ranks an HR Manager and Content Writer highly via this exact trap), a
+  23-signal Redrob behavioral composite (recency, response rate, profile
+  completeness), and a 5-check internal-consistency honeypot detector.
+  Scores combine multiplicatively so no single inflated signal can carry a
+  poor-fit candidate to the top. Verified on the real 100,000-candidate file:
+  0% honeypot rate in the top 100, and the organizers' own misleading sample
+  candidates rank between 31,707 and 92,895 out of 100,000. Full-dataset
+  runtime is ~60-70 seconds on a single CPU core, well within the 5-minute
+  budget.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
