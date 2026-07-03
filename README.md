@@ -35,7 +35,7 @@
 - **Zero GPU · Zero internet · Zero hosted-LLM calls** at ranking time
 
 ## Usage
-(could not upload candidates.jsonl due to large size- use the provided demo link https://colab.research.google.com/drive/1T6XXVrmWqkoxcRkOUqI2SQV7E1VuD0fv?usp=sharing )
+## (could not upload candidates.jsonl due to large size- use the provided demo link https://colab.research.google.com/drive/1T6XXVrmWqkoxcRkOUqI2SQV7E1VuD0fv?usp=sharing )
 
 ```bash
 pip install -r requirements.txt
