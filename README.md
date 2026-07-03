@@ -34,7 +34,8 @@
 - **Runtime: ~90 seconds** on a single CPU core, well under the 5-minute budget
 - **Zero GPU · Zero internet · Zero hosted-LLM calls** at ranking time
 
-## Usage(could not upload candidates.jsonl due to large size- use the provided demo link)
+## Usage
+(could not upload candidates.jsonl due to large size- use the provided demo link https://colab.research.google.com/drive/1T6XXVrmWqkoxcRkOUqI2SQV7E1VuD0fv?usp=sharing )
 
 ```bash
 pip install -r requirements.txt
@@ -45,7 +46,7 @@ python rank.py --candidates ./candidates.jsonl --out ./submission.csv
 # Validate
 python validate_submission.py submission.csv
 
-# Run for demo
+# Click for demo
 https://colab.research.google.com/drive/1T6XXVrmWqkoxcRkOUqI2SQV7E1VuD0fv?usp=sharing
 ```
 
