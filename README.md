@@ -1,7 +1,7 @@
 # Redrob × Hack2Skill — India Runs:
 # Intelligent Candidate Ranking 
 
-**redrob-india-runs-ranker** is an AI-powered candidate ranking engine built for the **Redrob × Hack2Skill** challenge. It processes **100,000 candidate profiles** in just **90 seconds** on a single CPU core, completely defeating trick questions with a **0% honeypot rate** using advanced 5-layer intelligence and zero external APIs!
+**Redrob-india-runs-ranker** is an AI-powered candidate ranking engine built for the **Redrob × Hack2Skill** challenge. It processes **100,000 candidate profiles** in just **90 seconds** on a single CPU core, completely defeating trick questions with a **0% honeypot rate** using advanced 5-layer intelligence and zero external APIs!
 
 **Author:** S Keerthana
 
